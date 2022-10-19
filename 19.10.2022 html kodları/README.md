@@ -3,5 +3,7 @@
 - **Array** dizi tanımlamada kullanılır.
 - **Foreach** komutu bir Array içerisindeki her bir eleman için bir fonksiyon çağırır. Bu döngü sadece dizilerde kullanılır.
 - **Echo** php içerisinde ekrana yazdırmaya yarar.
-- **alert** uyarı penceresi açmaya yarar. alert içerisine yazdığımız yazı ekrana bastırılır.
+- **alert** javascriptte uyarı penceresi açmaya yarar. alert içerisine yazdığımız yazı ekrana bastırılır.
 - **this** javascript içerisinde bir nesneden bahsetmeye yarar.
+- node js de es6 yı kullanmak için package json içerisinde **type:module** tanımlanması gerekir. 
+- web üzerinde ise es6 modülleri için script içerisinde **type=module** tanımlanmalıdır.
