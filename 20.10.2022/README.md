@@ -1,2 +1,2 @@
-[InternetShortcut]
-URL=https://github.com/davutefe45/not/blob/main/20.10.2022/README.md.txt
+- **margin** ekler isek oluşturduğumuz şemanın dıştan eşit şekilde boşluk bırakmasını sağlar. Eğer ki belli yönlerden oluşturmasını istersek **top(üstten)** **bottom(alttan)** **left(soldan)** **right(sağdan)** boşluk bırakmaya yarar
+- **margin>border>padding** şeklinde sıralanır. **margin** en dıştaki boşluğu temsil eder. **border** **margin**'in içerisinde olup **margin**'e karşı olan boşluğu temsil eder. **padding** ise **border** içerisinde olup **border**'a karşı olan boşluğu temsil eder. 
