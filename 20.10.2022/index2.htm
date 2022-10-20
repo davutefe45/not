@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .yazi{
+            border:10px  solid green;
+            margin:30px;
+            padding:20px;
+            background-color: darksalmon;
+            color:aliceblue;
+            font-size:26px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container0{
+            border:1px solid blue;
+            margin:35px;
+        }
+        /* Flex özelliğinin tanımlanması */
+        .container1{
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction: row; /* row | row-reverse | column | column-reverse; */
+        }        
+
+        .container2{
+ 
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction: row-reverse; /* row | row-reverse | column | column-reverse; */
+        }        
+
+        .container3{
+ 
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction:column; /* row | row-reverse | column | column-reverse; */
+        } 
+        .container4{
+ 
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction:column-reverse; /* row | row-reverse | column | column-reverse; */
+        }   
+        
+        .container5 {
+ 
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction: row; /* row | row-reverse | column | column-reverse; */
+            flex-wrap: nowrap; /* nowrap | wrap | wrap-reverse; */
+        }         
+        .container6 {
+         
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction: row; /* row | row-reverse | column | column-reverse; */
+            flex-wrap: wrap; /* nowrap | wrap | wrap-reverse; */
+        }         
+        .container7 {
+ 
+            border:1px solid blue;
+            margin:35px;
+            display:flex;
+            flex-direction: row; /* row | row-reverse | column | column-reverse; */
+            flex-wrap: wrap-reverse; /* nowrap | wrap | wrap-reverse; */
+        } 
+
+        .bg-r1{
+            background-color: crimson;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .bg-g1{
+            background-color: aqua;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container0"> 
+        <div class="yazi bg-r1" id="sayac">Yazi - 1</div>
+        <div class="yazi bg-g1">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi bg-r1">Yazi - 5</div>
+      </div>  
+  
+      <div class="container1"> 
+        <div class="yazi bg-r1">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>     
+      <div class="container2"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>    
+      <div class="container3"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>  
+      <div class="container4"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>       
+      <div class="container5"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>  
+      <div class="container6"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div> 
+      <div class="container7"> 
+        <div class="yazi">Yazi - 1</div>
+        <div class="yazi">Yazi - 2</div>
+        <div class="yazi">Yazi - 3</div>
+        <div class="yazi">Yazi - 4</div>
+        <div class="yazi">Yazi - 5</div>
+      </div>                                   
+ 
+</body>
+</html>
