@@ -1,0 +1,1 @@
+- Nesnenin kendisine **python**'da self ile ulaşırken **javascript** ve **php**'de **this** ile ulaşırız. **php**'de **"->"** şeklinde ok kullanırken **python**'da ve **javascript** de **"."** kullanırız. Ayrıca **php** de **"$"** işareti de ekleriz.
