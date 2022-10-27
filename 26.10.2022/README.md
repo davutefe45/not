@@ -20,3 +20,5 @@ ile artık projemiz için gerekli olan paketlerin kurulması gerçekleştirilir.
 
 7-) Projeyi çalıştırmak için F1 ile Python select interpreter ile 
     (venv) adlı virtual environment seçilerek program çalışıtrılabilir
+
+**ders kodlarını bulmak için
