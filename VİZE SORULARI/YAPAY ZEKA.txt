@@ -1,0 +1,149 @@
+1) VSCode ile virtual environment nasıl oluşturulur?
+
+*pip install virtualenv <ENTER>
+*python -m venv analiz
+*./analiz/Script/activate
+
+2) python ile numerik işlemleri daha hızlı ve kolay manipule edebilmek için hangi kütüphaneyi kullanırız
+
+numpy
+
+3)python ile veri kümeleri işlemlerini daha hızlı ve kolay manipüle edebilmek için hangi kütüphaneyi kullanırız
+pandas
+
+4)
+import pandas as pd
+liste1=[1,2,3,4,5,6,7] 
+
+Yukarıdaki Python kodlarına göre listesinden (array/dizi) den seri oluşturunuz
+
+ps=pd.Series(data=liste1)
+
+5) 
+import pandas as pd
+
+Yukarıdaki kodlara ek olarak movies.csv dosyasını bir frame olarak nasıl içeriye alırız?
+
+filmler=pd.read_csv("movie.csv")
+
+6) 
+import pandas as pd
+
+okunan=pd.read_csv("hesaplar.csv")
+
+jupiter'de hesaplar.csv dosyasının okunan değerlerin bastırılması için hangisi yazılır?
+
+okunan
+
+7)
+import pandas as pd
+okunan=pd.read_csv("bilgiler.csv")
+
+Pandas kütüphanesiyle okunan verilerde field olarak adi,soyadi,tlf,ogrencino gibi tanımlamalar varsa, sadece ogrencino bilgilerini nasıl ekrana bastırabiliriz.
+
+okunan.ogrencino
+okunan['ogrencino']
+
+8)
+import pandas as pd
+okunan=pd.read_csv("bilgiler.csv")
+okunan verilerde field olarak adi,soyadi,tlf,ogrencino gibi tanımlamalar varsa, ilk 5 öğrenci ekrana nasıl bastırılır
+
+okunan.head()
+okunan.head(adet) kaç adet satır yazdırılacağı
+
+9)
+import pandas as pd
+okunan=pd.read_csv("bilgiler.csv")
+okunan verilerde field olarak adi,soyadi,tlf,ogrencino gibi tanımlamalar varsa, son 5 öğrenci ekrana nasıl bastırılır
+
+okunan.tail()
+okunan.tail(adet) kaç adet satır yazdırılacağı
+
+10)
+import pandas as pd
+okunan=pd.read_csv("bilgiler.csv")
+okunan verilerde field olarak adi,soyadi,tlf,ogrencino gibi tanımlamalar varsa, vize notu 60 dan küçük olanları filtrelemek için aşağıdakilerden hangisi kullanılır?
+okunan[okunan.vize < 60]
+
+11)
+import pandas as pd 
+superguc=["batman","superman","örümcek adam","Iron man","Kaptan Amerika"] # list şeklinde
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+Yukarıdaki kodlara göre superguc listesinden bir seri aşağıdakilerden hangisidir?
+pd.Series(superguc)
+
+12)
+import pandas as pd 
+superguc=["batman","superman","örümcek adam","Iron man","Kaptan Amerika"] # list şeklinde
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+Yukarıdaki kodlara göre data ve indexleri nasıl kendimiz belirleriz
+pd.Series(data=superguc,index=gucduzey)
+
+13)
+import pandas as pd 
+superguc=["batman","superman","örümcek adam","Iron man","Kaptan Amerika"] # list şeklinde
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+marvel=pd.Series(data=superguc,index=gucduzey)
+
+Ortalama değerler nasıl bulunur?
+
+marvel.mean()
+
+14)
+import pandas as pd 
+superguc=["batman","superman","örümcek adam","Iron man","Kaptan Amerika"] # list şeklinde
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+marvel=pd.Series(data=superguc,index=gucduzey)
+
+Maksimum / Minimum değerler nasıl bulunur?
+
+marvel.max(), marvel.min()
+
+15) 
+import pandas as pd 
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+gucduzey değerlerinin 3 üncü kuvveti nasıl alınır?
+
+gucduzey**3
+
+16) 
+import pandas as pd 
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+gucduzey değerlerininin 4 ile çarpılması nasıl gerçekleştirilir?
+
+gucduzey*4
+
+17)
+import pandas as pd 
+gucduzeyi=(90,100,95,95,50) # tuple şeklinde
+
+gucduzey değerlerinine 15 ilave edilmesi nasıl gerçekleştirilir?
+
+gucduzey+15
+
+18)
+import pandas as pd
+df=pd.read_csv("reastaurant_inspections.csv")
+
+ile csv dosyasından okunan verilerde, Name, Date, Info, Valu fieldları olduğuna göre sadece Name ve Date bilgileri ekrana nasıl basılır?
+
+df[["Name","Date"]]
+
+19)
+import pandas as pd
+df=pd.read_csv("reastaurant_inspections.csv")
+ile csv dosyasından okunan verilerde, Name, Date, Info, Value fieldları olduğuna göre sadece 2017-08-08 tarihinden büyük olanları nasıl elde ederiz?
+df[df["Date"]>'2017-08-08']
+
+20)
+import pandas as pd
+df=pd.read_csv("reastaurant_inspections.csv")
+ile csv dosyasından okunan verilerde, Name, Date, Info, Value fieldları olduğuna göre sadece en büyük tarihli olan bilgileri nasıl elde ederiz?
+df[df["Date"]==df["Date"].max()]

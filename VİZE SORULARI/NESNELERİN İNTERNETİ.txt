@@ -1,0 +1,56 @@
+1) Nesnelerin interneti, bir algılayıcının(sensör) veriyi bir toplayıcıya iletebilmesi için aşağıdakilerden hangisini kullanabiliriz?
+
+wifi,tcp/ip,udp,bluetooth,rf,kablo vb.......
+sdcard kullanılmaz
+
+2) Nesnelerin internetinde, algılayıcı olarak gerçek hayatta ne tür bilgileri alabiliriz?
+
+3) Nodejs ortamında, mysql veritabanına bağlanmak için 
+projemize modulün kurulması için 
+aşağıdakilerden hangi işlemin yapılması gerekir?
+
+npm install mysql
+npm i mysql
+
+4)
+module.exports={
+	
+};
+
+Yukarıdaki işlemde, export edilen nesne içerisinde bir dizi tanımlamasını nasıl yapabiliriz?
+
+abc:[]
+
+5) class mysql_db{
+constructor(host,user,passwd,database){
+
+	}
+}
+
+Yukarıda tanımlanan nesne örneğinden bir nesne türetilmek istenirse, aşağıdakilerden hangisi doğru bir yazım olur?
+
+let user= new mysql_db("127.0.0.1","enis","1234","db")
+
+6) Mysql veritabanına bağlantıyı aşağıdakilerden hangisi ile gerçekleştirebiliriz.
+
+createConnection(parametreler)
+connect()
+
+7) mysql veritabanına veri silme işlemini gerçekleştirmek için mysqldb adlı değişken tanımlanmıştır. Aşağıdakilerden hangisi ile bu işlem gerçekleştirilir?
+!!silme ekleme düzeltme ve seçme ifadeleri olabilir
+
+var mysqlquery = 'DELETE from tabloadı where satır=10'
+
+mysqldb.query(mysqlquery);
+
+8) 
+let mysqldb=require("mysql");
+class network{
+	constructor(){
+		............
+	}
+}
+
+Yukarıdaki kodlarda, newtork oluşturulurken mysql nesnesi oluşturulmak istenirse aşağıdakilerden hangisi ile gerçekleştirilir.
+
+this.mydb = new mysqldb();
