@@ -1,0 +1,115 @@
+1-) div taginde, class=".... customer" ifadesinde customer adlı bir style tanımlanmıştır.
+<style>....</style> bloğu içinde nasıl bir tanımlama yapılması gerekir?
+
+.customer{
+	
+}
+
+2-) HTML sayfasında PHP kodlarına giriş-çıkış yapmak aşağıdakilerden hangisi kullanılır?
+
+<?php .... ?>
+
+3-) Php dilinde, 15 defa bir işlemin yapılması için aşağıdakilerden hangisi kullanılır?
+
+for($i=0; $i < 15; $i++){.......}
+
+4-) Php dilinde, for($i=0; $i < 5;){...........} bu döngüde {......} kısmında ne
+yazılması gerekir?
+
+{... $i+=2; ....}
+
+5-) Php dilinde, urunlerBilgisi adlı class tanımlaması yapılmıştır. Kodlarımızda
+bu class kullanmak istediğimizde, nasıl bir ifade yazmalıyız?
+
+$ubilgi=new urunlerBilgisi();
+
+6-) Php dilinde, aşağıdaki kodlar çalıştırıldığında $fiyat değeri nedir?
+$urunid=0; 
+if(isset($urunid)){ $fiyat=100;} else { $fiyat=200;}
+
+100
+
+7-) Php dilinde, aşağıdaki kodlar çalıştırıldığında $fiyat değeri nedir?
+$urunid=0; 
+if($urunid){ $fiyat=100;} else { $fiyat=200;}
+
+200
+
+8-) Php dilinde, define ile ne tanımlanır?
+
+sabit
+
+
+10-) Javascript dilinde, $.getJSON("booking.php",{param:1},function(res){}); böyle bir istek 
+bulunulduğunda, php dosyasında yanıt olarak ne tür bir fonksiyon kullanılmalıdır?
+
+json_encode
+
+
+11-) function aliKaan($a,$b,$c,$d){
+	$e=$a++ * ++$b;
+	$f=++$c * $d++;
+    $g= $a + $ d;
+	echo "e 'nin değeri : $e / f 'nin değeri : $f";
+} 
+ 
+
+Yukarı php fonksiyonu aliKaan(1,2,3,4) şeklinde çağırıldığında aşağıdakilerden
+hangisini ekrana yazar?
+
+e 'nin değeri : 3 / f 'nin değeri : 16
+
+12-) Php dilinde, $adisoyadi adlı değişkenin tanımlı olup olmadığını nasıl kontrol ederiz?
+
+isset($adisoyadi)
+
+13-) urungetir.php dosyasına url kısmında parametreler göndermek istenirse nasıl yazılmalıdır?
+
+urungetir.php?a=1&b=34&c=4
+
+14-) Php dilinde, $vizeler=Array(30,49,55,76,33,78); vize notlarının tutulduğu $vizeler
+adlı değişkenin değerleri 10 puan arttırılacaktır. Aşağıdaki hangi işlem ile bu gerçekleştirilir?
+
+for($i=0; $i < count($vizeler); $i++){ 
+	$vizeler[$i] += 10; 
+}
+
+15-) Aşağıdaki html taglerinden herhangi birine mouse ile tıklama olayını yakalamak 
+için jQuery de nasıl bir kodlama yapılmalıdır?
+	<div class="tab-pane fade sekmeler" id="tab2Id" role="tabpanel"></div>
+	<div class="tab-pane fade sekmeler" id="tab3Id" role="tabpanel"></div>
+	<div class="tab-pane fade sekmeler" id="tab4Id" role="tabpanel"></div>
+	<div class="tab-pane fade sekmeler" id="tab5Id" role="tabpanel"></div>
+
+$(".sekmeler").on("click",function(){});
+
+16-) socket.io ile bir server bağlantı şekli aşağıdakilerden hangisi doğrudur?
+
+ io.connect('ws://127.0.0.1:8082');
+
+17-) socket.io işlemiyle bağlantı kurulduktan sonra socket değişkeninde tutulan nesne,
+server'a bağlantı gerçekleştrildiği aşağıdaki hangi sistemde kontrol edilir?
+
+socket.on("connect",function(){......});
+
+18-) socket.io işlemiyle bağlantı socket  adlı nesnede tutulmaktadır. 
+Bağlantı koptuğunda ya da sonlandırıldığında hangi olay tetiklenir?
+
+socket.on("disconnect",function(){......});
+
+19-) socket.io işlemlerinde socket adlı nesnede tutulmaktadır. 
+Mesaj atma eylemi gerçekleştirilmesi istenirse, aşağıdaki hangi yöntemle yapılır?
+
+socket.emit('mesajBaslik','mesaj');
+
+20-) socket.io işlemlerinde socket adlı nesnede tutulmaktadır.
+socket.emit('veri',data); mesaj iletilmektedir. data adlı değişken 
+aşağıdakilerden ne tür bir bilgiyi barındırabilir?
+
+JSON , string, sayı
+
+
+
+
+
+
