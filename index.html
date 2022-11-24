@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    Flex Hakkında
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-background
+    https://yoksel.github.io/flex-cheatsheet/#section-justify-content
+    -------------
+    container olarak isimlendirilen item ların barındığı div  
+    display:flex olarak tanımlanır. container class ına sahip olan bu div içinde
+    * Yerleşim  *
+    - flex-direction : row (varsayılan) | row-reverse | column | column-reverse  ile item dizilişleri belirlenir
+    - flex-wrap :  nowrap (varsayılan) | wrap | wrap-reverse
+    - flex-flow  : flex-direction ve flex-wrap birleşimidir. "flex-flow : row wrap" aynı anda tanımlanır.
+    * Hizalama *
+    - justify-content : flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right ... + safe | unsafe;
+    - align-items :
+    - align-content
+    - gap 
+    - row-gap
+    - column-gap
+    özellikleri tanımlanarak içindeki nesnenlerin dizilişi düzenlenebilir.
+
+    item olarak tanımlanan div nesnelerinde ise
+    - align-self
+    - order
+    - flex-grow     ---
+    - flex-shrink      |--------  aynı anda tanımlanır => "flex: grow shrink basis" tanımlaması tyapılabilir
+    - flex-basis    ---
+    özellikleri tanımlanarak nesnelerin continer içindeki düzenlemesi yapılır.
+
+-->    
+    <style>
+        .item,.itema{
+            border:1px solid green; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            padding: 30px; /* border ile yazı arasındaki mesafe */
+            margin:20px; /* border ile diğer nesneler arasındaki mesafe */
+            background-color: coral; /* arka plan rengi */
+            color:white; /* yazı rengi */
+        }
+
+        .itema{
+            background-color: darkcyan;
+        }
+
+        .container{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:3px dashed rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            margin:30px;
+        }
+
+        .containerrow{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            margin:20px;
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+        }        
+
+        .containerrev{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row-reverse; /* container içindeki nesneler terten ve satır sonundan itibaren dizilir */
+        }    
+
+        .containercol{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: column; /* container içindeki nesneler sütun şeklinde dizilir */
+        }        
+
+        .containercolrev{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: column-reverse; /* container içindeki nesneler terten ve sütun sonundan itibaren dizilir  */
+        }        
+
+        .containerwrap{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            flex-wrap: wrap;     
+        }        
+
+        .containerrow{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+        }        
+
+        .containerjuststart{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: start;
+        }        
+
+        .containerjustend{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: end;
+        }        
+
+        .containerjustcenter{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: center;
+        }        
+
+        .containerjustsb{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: space-between; /* Sağ ve soldaki nesnelere  boşluk işlemi uygulanmaz.. */
+        }        
+
+        .containerjustsa{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: space-around; /* Sağ ve soldaki nesnelere de boşluk işlemi uygulanır.. */
+        }    
+
+        .containerjustse{
+            padding:10px; /* border ile iç kısımdaki nesneler uzaklık */
+            border:1px solid rebeccapurple; /* çerçeve-kalınlığı  çizgi-tipi  renk  */
+            display: flex;
+            flex-direction: row; /* Varsayılan diziliş*/
+            justify-content: space-evenly; /* Sağ ve soldaki nesnelerde dahil tüm nesnelere arasında aynı boşluk uygulanır.. */
+        }    
+
+    </style>
+</head>
+<body>
+
+
+    <!-- div.container>div*5.item{item - $}  yazılara aşağıdaki div'ler oluşturuldu -->
+    <div class="container"  >
+        <div class="item">item - 1</div>
+        <div class="item">item - 2</div>
+        <div class="item">item - 3</div>
+        <div class="item">item - 4</div>
+        <div class="item">item - 5</div>
+    </div>    
+<!-- Yukarıdaki satırlar işaretlenip  shit+alt+aşağı ok ile kopyalanmıştır , class ismi değiştirilmiştir-->
+    <div class="containerrow " >
+        <div  class="item">item - 1</div>
+        <div  class="item">item - 2</div>
+        <div  class="item">item - 3</div>
+        <div  class="item">item - 4</div>
+        <div  class="item">item - 5</div>
+    </div>     
+
+
+    <div class="containerrev"  >
+        <div  class="item">item - 1</div>
+        <div  class="item">item - 2</div>
+        <div  class="item">item - 3</div>
+        <div  class="item">item - 4</div>
+        <div  class="item">item - 5</div>
+    </div>     
+
+    <div class="containercol">
+        <div  class="item">item - 1</div>
+        <div  class="item">item - 2</div>
+        <div  class="item">item - 3</div>
+        <div  class="item">item - 4</div>
+        <div  class="item">item - 5</div>
+    </div>     
+     
+    <div class="containercolrev">
+        <div  class="item">item - 1</div>
+        <div  class="item">item - 2</div>
+        <div  class="item">item - 3</div>
+        <div  class="item">item - 4</div>
+        <div  class="item">item - 5</div>
+    </div>     
+     
+    <div class="containerwrap">
+        <div  class="item">item - 1</div>
+        <div  class="item">item - 2</div>
+        <div  class="item">item - 3</div>
+        <div  class="item">item - 4</div>
+        <div  class="item">item - 5</div>
+    </div>     
+
+    <div class="containerjuststart">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+    <div class="containerjustend">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+    <div class="containerjustcenter">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+    <div class="containerjustsb">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+    <div class="containerjustsa">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+    <div class="containerjustse">
+        <div  class="itema">item - 1</div>
+        <div  class="itema">item - 2</div>
+        <div  class="itema">item - 3</div>
+        <div  class="itema">item - 4</div>
+        <div  class="itema">item - 5</div>
+    </div>     
+
+
+
+</body>
+</html>
